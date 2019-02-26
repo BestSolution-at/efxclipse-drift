@@ -120,4 +120,5 @@ jobs:
         - ls -al org.eclipse.fx.drift.updatesite/target
       after_success:
         - aws s3 cp org.eclipse.fx.drift.updatesite/target/org.eclipse.fx.drift.updatesite-0.1.0-SNAPSHOT.zip s3://efxclipse-drift/$TRAVIS_BUILD_NUMBER/updatesite.zip
+        - wget --http-user=$P2_FETCHER_USER --http-password=$P2_FETCHER_PASSWORD $P2_FETCHER_URL?travisbuild=$TRAVIS_BUILD_NUMBER
 
