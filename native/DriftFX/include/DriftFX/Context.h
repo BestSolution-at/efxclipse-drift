@@ -12,11 +12,12 @@
 #ifndef DRIFTFX_CONTEXT_H
 #define DRIFTFX_CONTEXT_H
 
+#include <DriftFX/Common.h>
 #include <DriftFX/Texture.h>
 
 namespace driftfx {
 
-class Context {
+class DRIFT_API Context {
 
 public:
 	virtual ~Context();
